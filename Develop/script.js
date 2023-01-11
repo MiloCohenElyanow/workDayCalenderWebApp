@@ -26,40 +26,4 @@
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-$(function () {
-  currentHour = moment().hour();
 
-  currentDate = moment("MM", "DD", "hh"); // moment to get current time/date in month month date date hour hour format lowercase h's for 12hour time clock
-    
-  console.log($('#10').attr('id'));
-
-  for(var i = 9; i<18;i++){ // this should run the same amount of hours there are in the html
-    console.log($("#"+[i]).attr('id')); // this logs all of the ids for all of the hours in the html\
-    if (currentHour == ($("#"+[i]).attr('id'))){ // this comapres the current hour to the internal hour in the for loop
-      $('#' +[currentHour]).removeClass('past'); // this removes past from the current hour
-      $('#'+[currentHour]).addClass('present'); // adds present to the current hour
-    }
-    if(currentHour < i){ // compares currenthour to indexed i so all future i's will have past removed from them and future added
-      $('#'+ i).removeClass("past");
-      $('#'+ i).addClass('future');
-    }
-  }
-
-  $(".saveBtn").click(function(e) { //jquery click event listner on .savebtn, this applys for all of the save buttons
-    e.preventDefault();
-    var currSaveCont = ($(this).prev().val());//going to div from the selected save button and getting that value, so the content saved fr
-    var saveContKey = ($(this).parent().attr('id'));
-    console.log("save button:"," key: ", saveContKey," content: ", currSaveCont)
-    
-    let setobject = {varid: saveContKey, varcont: currSaveCont};
-    
-    localStorage.setItem(saveContKey,(currSaveCont));
-  });
-
-  function loadLocalStorage(){
-    
-  }
-
-
- 
-});
