@@ -49,15 +49,20 @@
       e.preventDefault();
       var currSaveCont = ($(this).prev().val());//going to div from the selected save button and getting that value, so the content saved fr
       var saveContKey = ($(this).parent().attr('id'));
+
       console.log("save button:"," key: ", saveContKey," content: ", currSaveCont)
       
       let setobject = {varid: saveContKey, varcont: currSaveCont};
       
-      localStorage.setItem(saveContKey,(currSaveCont));
+      var localstore = localStorage.setItem(setObject);
+      console.log("localstoreset", localstore)
+      var getLocalStore = localStorage.getItem(setobject);
+      console.log('getlocalstore', getLocalStore);
     });
   
     function loadLocalStorage(){
-      
+      var newCont = localStorage.getItem(saveContKey);
+      console.log(saveContKey);
     }
   
   
