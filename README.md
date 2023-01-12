@@ -1,99 +1,45 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Calender
 
-## Your Task
+## Descrpition
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+  -This is a light-weight web application that should be able to run on most any computer connected to the internet.
+  -This simple web app features dynamicly updated javascript, html, and css powered by javascript
+  -This web app features a javascript library, moment.js, that automaticaly get times, dates, time zones, and much more for me.
+  -This web app features local storage to save your custom events to your browser so you can close the tab and have the same information later.
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+## Tech Stack
+
+  ```md
+  HTML, CSS, Javascript
+  Bootstrap
+  Jquery
+  Moment.js
+  Local storage
+  ```
 
 ## User Story
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+  ```md
+    As a student I want to create a web appplication 
+    That can show my working times of the day
+    That can track things I want to get done during the day
+    That can display the current date
+    that can store my costom events in local storage
+    that is easily readable to me and others
+  ```
 
-## Acceptance Criteria
+## Preview
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+The following image displays the functionality of the application:
 
-The following animation demonstrates the application functionality:
+![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/pictures/workdayschedulerpreview.PNG)
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+## Usage
 
-## Grading Requirements
+  This project has no liscense, and is free to use in anyway anyone sees fit at any time.
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+  *This website is hosted live: [HERE](https://whotf1.github.io/workDayCalenderWebApp/)
 
-This Challenge is graded based on the following criteria:
+  *you can also check out the source code and the repository here: [HERE](https://github.com/whotf1/workDayCalenderWebApp)
 
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses a date utility library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+  *please feel free to fork, clone, or copy the repository, if you have inquiries about inproving this application please feel free to message me on github

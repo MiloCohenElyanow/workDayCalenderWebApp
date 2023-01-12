@@ -1,6 +1,6 @@
   $(function () {
     const rootElement = $('.container-lg');
-    const timeElms = Array.from(rootElement.children()); // writing to chidlren when possible later
+    const timeBlocks = Array.from(rootElement.children()); // writing to chidlren when possible later
     currentHour = moment().hour();
     currentDate = moment().format("YYYY, MM, DD"); // moment to get current time/date in month month date date hour hour format lowercase h's for 12hour time clock
     // console.log("DATE: ",currentDate);
@@ -23,11 +23,11 @@
       localStorage.setItem(savedataID,(savedataTXT)); // setting savedataID as the id, and savedataTXT as the content from that id.
       e.preventDefault();
     })
-    timeElms.forEach(e => {
-      const elmKey = e.id ; //events id(button click)
-      const elmText = $(e).children().eq(1); //from event consttructing into the child 1 element
-      const savedData = localStorage.getItem(elmKey);
+    timeBlocks.forEach(e => {
+      const elementID = e.id ; //events id(button click)
+      const elementTXT = $(e).children().eq(1); //from event consttructing into the child 1 element
+      const elementHook = localStorage.getItem(elementID);
       
-      elmText.text(savedData); //actually writing the element to the page
+      elementTXT.text(elementHook); //actually writing the element to the page
     });
   });
