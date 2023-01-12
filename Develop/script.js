@@ -55,15 +55,10 @@
       let setobject = {varid: saveContKey, varcont: currSaveCont};
       
       var localstore = localStorage.setItem(setObject);
-      console.log("localstoreset", localstore)
+      console.log("localstoreset", localstore);
       var getLocalStore = localStorage.getItem(setobject);
       console.log('getlocalstore', getLocalStore);
     });
-  
-    function loadLocalStorage(){
-      var newCont = localStorage.getItem(saveContKey);
-      console.log(saveContKey);
-    }
   
   
    
