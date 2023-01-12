@@ -27,6 +27,9 @@
   //
   // TODO: Add code to display the current date in the header of the page.
   $(function () {
+    const rootElement = $('.container-lg');
+    const timeElms = Array.from(rootElement.children());
+
     currentHour = moment().hour();
   
     currentDate = moment("MM", "DD", "hh"); // moment to get current time/date in month month date date hour hour format lowercase h's for 12hour time clock
@@ -44,22 +47,21 @@
         $('#'+ i).addClass('future');
       }
     }
-  
-    $(".saveBtn").click(function(e) { //jquery click event listner on .savebtn, this applys for all of the save buttons
-      e.preventDefault();
-      var currSaveCont = ($(this).prev().val());//going to div from the selected save button and getting that value, so the content saved fr
-      var saveContKey = ($(this).parent().attr('id'));
+    $('.time-block').on('click' , '.saveBtn', function(e){ // targetting the time-blocks, click event inside them
+      const savedataID = $(this).parent().attr('id');
+      const savedataTXT = $(this).prev().val();
 
-      console.log("save button:"," key: ", saveContKey," content: ", currSaveCont)
+      localStorage.setItem(savedataID,(savedataTXT));
+      e.preventDefault();
+
+      console.log('deez noots');
+      console.log(typeof savedataID, typeof savedataTXT);
+    })
+    timeElms.forEach(e => {
+      const elmKey = e.id ; //
+      const elmText = $(e).children().eq(1);
+      const savedData = localStorage.getItem(elmKey);
       
-      let setobject = {varid: saveContKey, varcont: currSaveCont};
-      
-      var localstore = localStorage.setItem(setObject);
-      console.log("localstoreset", localstore);
-      var getLocalStore = localStorage.getItem(setobject);
-      console.log('getlocalstore', getLocalStore);
+      elmText.text(savedData);
     });
-  
-  
-   
   });
